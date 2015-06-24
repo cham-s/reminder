@@ -1,11 +1,18 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 # This model initially had no columns defined.  If you add columns to the
-# model remove the '{}' from the fixture names and add the columns immediately
+# model remove the '{}' from the fixture 
+# column: valuenames and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+
+
+<% 20.times do |n| %>
+item_<%= n %>:
+  brand: Nike
+  category: Shoes
+  value: 150
+  date_taken: 27/06/2015
+  due_date: 28/06/2015
+  notes: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque cum ipsum adipisci delectus cumque ab, aut sequi autem consequuntur dicta, animi minus rem earum inventore alias quo recusandae praesentium dolorem numquam quia dolores. Reprehenderit, molestiae blanditiis porro animi praesentium, eaque.
+<% end %> 
