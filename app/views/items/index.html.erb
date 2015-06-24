@@ -52,30 +52,67 @@
 
  <div class="main-content">
     <div class="container">
+      
+      <% if @items.empty? %>
+          <p>Empty list add a new item</p>
 
+      <% else %>
       <p>Showing results in Category1,Category2, Category3</p>
       <div class="row">
         <div class="owee-tile">
 
-          <div class="col-md-3">
-            <%= image_tag 'max.jpg' %>
-            <h4><a href="#">Air Max Triax</a></h4>
-            <p><a href="#">Shoes</a></p>
-            <div class="due">
-             <p><a href="#">Jano</a></p>
-              <p class="pull-rght">Due: <span class="date">28/06/2015</span></p>
-            </div>
-            <div class="pricestat">
-              <p><span class="price pull-left">$27.00</span></p>
-              <p><span class="status status-lent pull-right">Still Lent</span></p>
-            </div>
-          </div>
-
-          
+        
 
 
+          <% @items.each_with_index do |item, index| %>
+
+              <% if index % 4 == 0 %>
+                      </div>
+                    </div>
+                    <hr>
+
+                    <div class="row">
+                      <div class="owee-tile">
+
+                          <div class="col-md-3">
+                          <%= image_tag 'max.jpg' %>
+                          <h4><a href="#"><%= item.name %></a></h4>
+                          <p><a href="#"><%= item.category %></a></p>
+                          <div class="due">
+                           <p><a href="#">Jano</a></p>
+                            <p class="pull-rght">Due: <span class="date"><%= item.due_date %></span></p>
+                          </div>
+                          <div class="pricestat">
+                            <p><span class="price pull-left"><%= item.value %></span></p>
+                            <p><span class="status status-lent pull-right">Still Lent</span></p>
+                          </div>
+                        </div>
+
+
+              <% else %>
+
+                <div class="col-md-3">
+                          <%= image_tag 'max.jpg' %>
+                          <h4><a href="#"><%= item.name %></a></h4>
+                          <p><a href="#"><%= item.category %></a></p>
+                          <div class="due">
+                           <p><a href="#">Jano</a></p>
+                            <p class="pull-rght">Due: <span class="date"><%= item.due_date %></span></p>
+                          </div>
+                          <div class="pricestat">
+                            <p><span class="price pull-left"><%= item.value %></span></p>
+                            <p><span class="status status-lent pull-right">Still Lent</span></p>
+                          </div>
+                        </div>
+
+              <% end %>
+
+            <% end %>
+
+          <% end %>
         </div>
       </div>
       <hr>
+
     </div>
   </div>
