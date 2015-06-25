@@ -1,0 +1,57 @@
+<div class="container">
+
+<%= form_for @item, html: {class: "form-horizontal"} do |f| %>
+
+   			<div class="form-group">
+   				<%= f.label :name, class: 'control-label col-sm-2' %>
+                <div class="col-sm-4">
+					<%= f.text_field :name, class: 'form-control' %>
+                </div>
+            </div>
+
+            <div class="form-group">
+   				<%= f.label :brand, class: 'control-label col-sm-2' %>
+                <div class="col-sm-4">
+					<%= f.text_field :brand, class: 'form-control' %>
+                </div>
+            </div>
+
+            <div class="form-group">
+   				<%= f.label :category, class: 'control-label col-sm-2' %>
+                <div class="col-sm-4">
+					<%= f.text_field :category, class: 'form-control' %>
+                </div>
+            </div>
+
+            <div class="form-group">
+   				<%= f.label :value, class: 'control-label col-sm-2' %>
+                <div class="col-sm-4">
+					<%= f.text_field :value, class: 'form-control' %>
+                </div>
+            </div>
+
+            <div class="form-group">
+   				<%= f.label :date_taken, class: 'control-label col-sm-2' %>
+                <div class="col-sm-4">
+					<%= f.text_field :date_taken, class: 'form-control' %>
+                </div>
+            </div>
+
+            <div class="form-group">
+   				<%= f.label :due_date, class: 'control-label col-sm-2' %>
+                <div class="col-sm-4">
+					<%= f.text_field :due_date, class: 'form-control' %>
+                </div>
+            </div>
+
+          
+
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                  <%= f.submit "Create", class: 'btn btn-primary' %>
+                </div>
+            </div>
+<% end %>
+
+</div>
