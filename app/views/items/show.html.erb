@@ -1,0 +1,39 @@
+
+
+<div class="container main-show">
+     <div class="row">
+       <div class="show-left">
+       <div class="col-md-3 show-left">
+         <%= image_tag 'nike.jpg' %>
+         <br><br>
+         <h4><%= @item.name %></h4>
+         <p>Lent to: <a href="">Jano</a></p>
+         <p>Due: <%= @item.due_date %></p>
+         <p>Notes: <%= @item.notes %></p>
+         <a href="#"><%= @item.category %></a>
+       </div>
+       </div>
+       <div class="col-md-6 show-middle">
+         <div class="image-middle">
+
+           <span class="glyphicon glyphicon-chevron-left arrow-left"></span>
+           <%= image_tag 'max.jpg', class: "preview-item active-preview" %>
+           <%= image_tag 'max2.jpg', class: "preview-item" %>
+           <%= image_tag 'max3.jpg', class: "preview-item" %>
+
+
+         <span class="glyphicon glyphicon-chevron-right arrow-right"></span>
+         </div>
+         <div class="marker-bottom">
+           <%= image_tag 'max-prev.jpg', class: "thumb-prev thumbnail-selected" %>
+           <%= image_tag 'max2-prev.jpg', class: "thumb-prev" %>
+           <%= image_tag 'max3-prev.jpg', class: "thumb-prev" %>
+
+           
+         </div>
+       </div>
+       <div class="col-md-3">
+         <h4><span class="big-price">$<%= @item.value %></span></h4>
+         <p class="big-status status-back">Still Lent</p>
+       </div>
+  </div>
